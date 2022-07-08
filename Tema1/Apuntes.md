@@ -85,7 +85,7 @@ Con Java se pueden desarrollar aplicaciones para diversos entornos de funcionami
 
 Os dejo un enlace por si queréis consultar un poco de la historia de Java y consultar las versiones.
 
-![Enlace a la wikipedia](https://es.wikipedia.org/wiki/Java_(lenguaje_de_programaci%C3%B3n))
+![Enlace a la wikipedia](https://es.wikipedia.org/wiki/Java_(lenguaje_de_programación))
 
 
 
