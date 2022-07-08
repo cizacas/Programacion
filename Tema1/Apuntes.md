@@ -69,7 +69,7 @@ Se buscaban principalmente dos cosas:
 
 ### Ejecución de programas en Java
 
-![Descripción de la imagen](/img/esquema_java.jpg)
+![Descripción de la imagen](img/esquema_java.jpg)
 
 Para poder ejecutar un programa Java es necesario tener instalado en el equipo una máquina virtual Java. Se trata de un programa que traduce las instrucciones compiladas del programa Java al lenguaje máquina que corresponda, según la plataforma bajo la que se ejecute el programa. 
 
