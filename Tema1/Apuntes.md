@@ -69,27 +69,31 @@ Se buscaban principalmente dos cosas:
 
 ### Ejecución de programas en Java
 
+#### JRE y JDK.
+
 ![Descripción de la imagen](img/esquema_java.jpg)
 
 Para poder ejecutar un programa Java es necesario tener instalado en el equipo una máquina virtual Java. Se trata de un programa que traduce las instrucciones compiladas del programa Java al lenguaje máquina que corresponda, según la plataforma bajo la que se ejecute el programa. 
 
 Sun proporciona de forma gratuita una máquina virtual Java con el nombre Java Runtime Environment (JRE) que puede descargarse desde la web de Java, buscando la versión correspondiente al sistema operativo sobre el que se desea ejecutar el programa.
 
-Con Java se pueden desarrollar aplicaciones para diversos entornos de funcionamiento:
-
-    Sin entorno gráfico, para el terminal.
-    Con entorno gráfico de Windows, Linux o MacOS.
-    Aplicaciones para páginas web.
-    Aplicaciones para dispositivos móviles: Teléfonos, PDA, etc.
-    Para sistemas de servidor.
-
 Os dejo un enlace por si queréis consultar un poco de la historia de Java y consultar las versiones.
 
 [Enlace a la wikipedia](https://es.wikipedia.org/wiki/Java_(lenguaje_de_programación))
 
+Tenemos que distinguir entre el JRE de Java y el JDK de Java. Para ello vamos a echar un vistazo al siguiente enlace:
 
+[Enlace a la wikipedia](https://www.java.com/es/download/help/techinfo_es.html)
 
-Para que un programador pueda llevar a cabo su tarea, dispone de herramientas para llevar a cabo su tarea. Lo más básico es tener un editor de texto donde escribir las instrucciones y un compilador que transforme estas instrucciones en un fichero con la codificación adecuada para que el ordenador sea capaz de ejecutarlo.
+Una vez que nos ha quedado clara la diferencia entre JRE y JDK, vamos a instalar el JDK, que ya incluye el JRE. La versión que tendríamos que instalar es el último JDK LTS, es decir, la versión que Oracle asegura que va a tener soporte durante más tiempo. Para ello tenemos que ir a la siguiente página, descargar el archivo elegido, e instalarlo en nuestro equipo.
+
+[Enlace a la wikipedia](https://www.oracle.com/java/technologies/downloads/)
+
+En nuestro caso vamos a instalar el JDK 17, que es la última version LTS, y es la que recomienda Oracle instalar.
+
+#### Entorno de desarrollo
+
+Para que un programador pueda llevar a cabo su tarea, dispone de herramientas para llevar a cabo su tarea. Lo más básico es tener un editor de texto donde escribir las instrucciones y un compilador que transforme el fichero de texto, con las sentencias de Java, en un fichero escrito en un lenguaje especial, capaz de ser interpretado por la Máquina Virtual de Java
 
 
 
