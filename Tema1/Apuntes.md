@@ -107,6 +107,116 @@ Debéis instalar el JDK que estamos utilizando en clase, y el Eclipse en el equi
 
 ![Descripción de la imagen](img/Imagen3.png)
 
+## PROGRAMACIÓN EN JAVA
+
+El código Java se escribe en documentos de texto con extensión .java. Al ser multiplataforma se pueden utilizar sin problema símbolos como la eñe o las vocales con tilde a la hora de poner nombre a las variables, aunque yo no os lo recomiendo.
+Consideraciones previas a tener en cuenta al escribir nuestros programas:
+* Hay diferencia entre mayúsculas y minúsculas
+* Cada línea debe terminar con ;
+* Una instrucción puede abarcar más de una línea
+* Los comentarios de una línea deben comenzar con // y si ocupan más de una línea deben comenzar con /* y terminar con */
+```
+/* Comentario
+de varias líneas */
+//Comentario de una línea
+```
+* A veces se marcan bloques de código, es decir, código agrupado. Cada bloque comienza con { y terminar con }
+```
+{
+	...código dentro del bloque
+}
+código fuera del bloque
+```
+### Nuestro primer programa
+
+```
+public class PrimerPrograma
+{
+     public static void main(String[] args)
+     {
+          System.out.println(“¡Mi primer programa!”);
+     }
+}
+```
+
+La primera línea *public class PrimerPrograma* declara el nombre de la clase del código. Más adelante se explicará que significa el concepto de clase por ahora entenderemos que el nombre de la clase es el nombre del programa.
+
+La línea *public static void main String args* sirve para indicar el inicio del método main. Este método contiene las instrucciones que se ejecutarán cuando el programa arranque.
+
+La instrucción *System out println* sirve para escribir en pantalla. Como lo que escribimos es un texto, se encierra entre comillas.
+
+Además, el archivo debería llamarse PrimerPrograma.java. Es recomendable que el nombre del programa (en realidad el nombre de la clase) y el del archivo coincidan.
+
+También es aconsejable que el nombre del programa comience con una letra mayúscula y le sigan letras en minúsculas. Si consta de varias palabras no pueden utilizarse espacios en blanco.
+
+### Paquetes en Java
+
+En cualquier lenguaje de programación existen librerías que contienen código ya escrito que nos facilita la creación de programas. En el caso de Java no se llaman librerías, sino paquetes. Los paquetes son una especie de carpetas que contienen clases ya preparadas y más paquetes.
+
+Para programar en Java se necesita instalar el kit de desarrollo de Java (la JDK). Este contiene los programas necesarios para compilar y ejecutar código Java. Pero además se incluyen miles de clases dentro de cientos de paquetes ya listos que facilitan la generación de programas.
+
+Algunos paquetes sirven para utilizar funciones matemáticas, funciones de lectura y escritura, comunicación en red, programación de gráficos...
+
+Por ejemplo la clase *System* está dentro del paquete *java.lang* (paquete básico) y posee el método *out.println* que necesitamos para escribir fácilmente por pantalla.
+
+La sintaxis de esta instrucción es *import paquete.subpaquete.subsubapquete.clase*. Esta instrucción se coloca arriba del todo en el código.
+
+### Variables en Java
+
+Las variables son contenedores que sirven para almacenar los datos que utiliza un programa.  Ocupan un espacio en la memoria RAM del ordenador para almacenar el dato al que se refiere. Cuando utilizamos el nombre de la variable estamos haciendo referencia a un dato que está en memoria.
+Las variables tienen un nombre (un identificador) que sólo puede contener letras, números (pero no puede empezar el nombre con un número) y el carácter de subrayado. 
+
+**Declaración:** Antes de poder utilizarla es necesario declararla:
+```
+tipo nombreVariable;
+```
+Donde tipo es el tipo de datos que almacenará la variable (texto, números enteros,...) y nombreVariable es el nombre con el que se conocerá la variable. 
+Ejemplos:
+```
+int días; // días es un número entero, sin decimales
+boolean decisión; //decisión sólo puede ser verdadera o falsa
+```
+También se puede hacer que la variable tome un valor inicial al declarar:
+```
+int días=365;
+```
+Y se puede declarar más de una variable a la vez del mismo tipo en la misma línea si las separamos con comas:
+```
+int días=365, año=23, semanas;
+```
+Al declarar una variable se puede incluso utilizar una expresión:
+```
+int a=13, b=18;
+int c=a+b; //es válido, c vale 31
+```
+Java es un lenguaje muy estricto al utilizar tipos de datos. Es un lenguaje fuertemente tipado: cada variable debe tener un tipo declarado.
+
+**Asignación:** Una vez que tenemos la variable declarada, hay que darla un valor. Para ello se utiliza el símbolo =.
+```
+int x = 7;
+```
+Pero la asignación se puede utilizar en cualquier momento (tras haber declarado la variable):
+```
+int x;
+x=7;
+x=x*2;
+```
+En Java siempre se asigna una valor inicial a las variables en cuanto se declaran. En el caso de los números es el cero.
+```
+int x; //x ya vale cero
+```
+### Tipos de datos
+
+8 tipos de datos primitivos o integrados: 
+4 tipos enteros (byte, short, int, long). 
+2 tipos de coma flotante (float, double). 
+Booleano (boolean). 
+Carácter (char). 
+No son objetos. 
+Se definen de forma (casi) idéntica en cada máquina en la que se ejecuta Java, algo que no ocurre en otros lenguajes de programación. 
+![imagen](https://user-images.githubusercontent.com/86012760/178099829-b471a523-4d06-426d-8d1c-2c009c5e70b0.png)
+
+
 
 
 
