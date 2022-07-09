@@ -104,6 +104,7 @@ Tenemos varios entornos disponibles, algunos de código abierto y gratuitos. Un 
 Debéis instalar el JDK que estamos utilizando en clase, y el Eclipse en el equipo de casa. Tendréis que hacer capturas de pantalla donde se vea la fecha y hora para comprobar que la instalación está hecha, del estilo a estos dos recortes:
 
 ![Descripción de la imagen](img/imagen2.png)
+
 ![Descripción de la imagen](img/imagen3.png)
 
 
