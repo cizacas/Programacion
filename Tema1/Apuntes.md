@@ -207,16 +207,27 @@ int x; //x ya vale cero
 ```
 ### Tipos de datos
 
-8 tipos de datos primitivos o integrados: 
-4 tipos enteros (byte, short, int, long). 
-2 tipos de coma flotante (float, double). 
-Booleano (boolean). 
-Carácter (char). 
-No son objetos. 
-Se definen de forma (casi) idéntica en cada máquina en la que se ejecuta Java, algo que no ocurre en otros lenguajes de programación. 
-![imagen](https://user-images.githubusercontent.com/86012760/178099829-b471a523-4d06-426d-8d1c-2c009c5e70b0.png)
+Como ya hemos visto, para declarar una variable hay que indicar de que tipo será la información que esa variable va a guardar. Cuando indicamos el tipo de dato de una variable indicamos que tipo de dato puede guardar, y cuanta memoria se reserva para esa variable. Cuanta mayor sea la memoria interna que utiliza, mayor es el rango de posibles valores.
 
+En Java tenemos 8 tipos de datos primitivos:
 
+- 4 tipos para enteros: byte, short, int, long.
+- 2 tipos para coma flotante: float, double.
+- 1 tipo para booleanos: boolean.
+- 1 tipo para carácter: char.
+
+| Tipo | Tamaño | Rango |
+| ------------- | ------------- | ------------- |
+| byte  | 8  | -128 a 127 |
+| short  | 16  | -32.768 a 32.767 |
+| int  | 32  | -2.147.483.648 a 2.147.483.647 |
+| long  | 64  | -9.223.372.036.854.775.808 a 9.223.372.036.854.775.8087 |
+| float  | 32  | +/- 3.4E+38F (6-7 dígitos importantes) |
+| double  | 64  | +/- 1.8E+308 (15 dígitos importantes) |
+| boolean  | 16  | conjunto de caracteres UNICODE ISO |
+| char  | 8 | True o False |
+
+En este momento estamos en condiciones de hacer nuestro primer ejercicio en Java. 
 
 
 
