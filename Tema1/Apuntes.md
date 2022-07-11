@@ -231,6 +231,253 @@ En este momento estamos en condiciones de hacer nuestro primer ejercicio en Java
 
 [Hoja de ejercicios 1](Ejercicios/Hoja01_Java_01.pdf)
 
+#### Tipos de datos: Enteros
+
+Los tipos byte, short, int y long sirven para almacenar datos enteros. Los enteros son números sin decimales. 
+
+Los números enteros se escriben tal cual, salvo si es de tipo long, que debemos poner al final la letra L mayúscula.
+
+No se acepta en general asignar variables de distinto tipo. Sí se pueden asignar valores de variables enteras a variables enteras de un tipo superior (por ejemplo asignar un valor int a una variable long). Pero al revés no se puede:
+```
+int i=12;
+byte b=i; //error de compilación, posible pérdida de precisión
+```
+La solución es hacer un cast. Esta operación permite convertir valores de un tipo a otro. Se usa así:
+```
+int i=12;
+byte b=(byte) i; //El (cast) evita el error
+```
+Hay que tener en cuenta en estos castings que si el valor asignado sobrepasa el rango del elemento, el valor convertido no tendrá ningún sentido ya que no puede almacenar todos los bits necesarios para representar ese número:
+```
+int i=1200;
+byte b=(byte) i; //El valor de b no tiene sentido
+```
+
+#### Tipos de datos: Números en coma flotante
+
+Los decimales se almacenan en los tipos float y double. Los decimales no son almacenados de forma exacta, por eso siempre hay un posible error en la representación. Es más preciso el double que el float puesto que utiliza más bytes para representar un número. El separador decimal que tenemos que utilizar es el punto y no la coma.
+```
+x=2.75;
+```
+A un valor se le puede añadir al final una f indicando que es un float. Se añade una d en caso de querer un double. En caso de no añadir nada se entiende que es un double.
+Lógicamente no se pueden asignar valores decimales a tipos de datos enteros:
+```
+int a = 7.5; //error
+```
+Si podríamos mediante un cast:
+```
+int a = (int) 7.5;
+```
+Pero se perderían los decimales. En el caso anterior a valdría 7
+El caso contrario sí se podría hacer:
+```
+int x = 9;
+double y = x; //correcto
+```
+Al declarar números (sean del tipo que sean), si no se indican valores iniciales, Java asigna el valor cero.
+
+#### Tipos de datos: booleanos
+
+Sirven para indicar si algo es verdadero (true) o falso (false). 
+```
+boolean b = false;
+```
+Si al declarar un valor booleano no se le da valor inicial, se toma como valor inicial false.
+
+#### Tipos de datos: caracteres
+
+Los valores de tipo carácter sirven para almacenar símbolos de escritura.
+```
+char letra;
+letra=’C’; //Los caracteres van entre comillas
+letra=67; //El código Unicode de la C es el 67. Esta línea hace lo mismo que la anterior
+```
+También hay una serie de caracteres especiales que van precedidos por el símbolo \, son estos:
+
+| Caracter | Significado |
+| ------------- | ------------- |
+| \b  | Retroceso  |
+| \t  | Tabulador  |
+| \n  | Nueva linea  |
+| \r  | Retorno de carro  |
+| \"  | Dobles comillas  |
+| \'  | Comillas simples  |
+| \\  | Barra inclinada  |
+
+#### Conversión entre tipos (casting)
+
+Ya se ha comentado la necesidad de uso del operador de casting para poder realizar asignaciones entre tipos distintos. Como resumen véanse estos ejemplos:
+```
+int a; byte b=12;  a=b;
+```
+El código anterior es correcto porque un dato byte es más pequeño que uno int y Java le convertirá de forma implícita. Lo mismo pasa de int a double por ejemplo. Sin embargo en:
+```
+int a=1; byte b; b=a; //error
+```
+El compilador devolverá error aunque el número 1 sea válido para un dato byte. Para ello hay que hacer un casting. Eso significa poner el tipo deseado entre paréntesis delante de la expresión.
+```
+int a=1; byte b;
+b= (byte) a; //correcto
+```
+En el siguiente ejemplo:
+```
+byte n1=100, n2=100, n3;
+n3= n1 * n2 /100; //error
+```
+Aunque el resultado es 100, y ese resultado es válido para un tipo byte; lo que ocurrirá en realidad es un error. La multiplicación 100\*100 da como resultado 10000, es decir un número de tipo int. Aunque luego se divide entre 100, no se vuelve a convertir a byte; ya que ante cualquier operación el tipo resultante siempre se corresponde con el tipo más grande que intervenga en la operación. Lo correcto sería:
+```
+n3 = (byte) (n1 * n2 / 100);
+```
+#### Ámbito de las variables
+
+Toda variable tiene un ámbito. Esto es la parte del código en la que una variable se puede utilizar. De hecho las variables tienen un ciclo de vida:
+1. En la declaración se reserva el espacio necesario para que se puedan comenzar a utilizar
+2. Se la asigna su primer valor
+3. Se la utiliza en diversas sentencias
+4. Cuando finaliza el bloque en el que fue declarada, la variable muere. Es decir, se libera el espacio que ocupa esa variable en memoria. No se la podrá volver a utilizar.
+Una vez que la variable ha sido eliminada, no se puede utilizar. Dicho de otro modo, no se puede utilizar una variable más allá del bloque en el que ha sido definida. Ejemplo:
+```
+{
+	int x=9;
+}
+int y=x; //error, ya no existe x
+```
+
+### Operadores
+
+Los datos se manipulan muchas veces utilizando operaciones con ellos. 
+Tenemos los siguientes tipos:
+- Aritméticos
+- Incrementales
+- Relacionales
+- Lógicos
+- De asignación
+
+#### Aritméticos
+
+| Operador | Descripción |
+| ------------- | ------------- |
+| +  | Suma dos operandos  |
+| -  | Resta dos operandos  |
+| *  | Multiplica dos operandos  |
+| /  | Divide dos operandos  |
+| %  | Calcula el resto de dividir el operador1 entre el operador2   |
+
+#### Incrementales o unarios
+
+| Operador | Uso | Descripción |
+| ------------- | ------------- | ------------- |
+| ++  | x++  | Incrementa x en 1. Evalúa antes.  |
+| ++  | ++x  | Incrementa x en 1. Evalúa después. |
+| --  | x--  | Decrementa x en 1. Evalúa antes. |
+| --  | --x  | Decrementa x en 1. Evalúa después |
+
+```
+int x = 5, y = 5; 
+System.out.println(++x); // imprime 6 
+System.out.println(x); // imprime 6 
+System.out.println(y++); // imprime 5 
+System.out.println(y); // imprime 6
+```
+
+#### Relacionales
+
+| Operador | Uso | Devuelve verdadero |
+| ------------- | ------------- | ------------- |
+| >  | x>y  | x es mayor que y  |
+| >=  | x>=y  | x es mayor o igual que y |
+| <  | x<y  | x es menor que y |
+| <=  | x<=y | x es menor o igual que y |
+| == | x==y  | x es igual a y |
+| !=  | x!=y  | x es distinto de y |
+
+#### Lógicos
+
+| Operador | Uso | Devuelve verdadero |
+| ------------- | ------------- | ------------- |
+| &&(and)  | condicion1&&condicion2  | condicion1 y condicion2 verdaderas  |
+| ||(or)  | condicion1||condicion2  | condicion1 o condicion2 verdaderas |
+| !(not)  | !condicion  | condicion falsa |
+
+#### De asignación
+
+| Operador | Uso | Descripción |
+| ------------- | ------------- | ------------- |
+| =  | x=y  | Asigna a x el valor de y  |
+| +=  | x+=valor  | Equivalente a x=x+valor |
+| -=  | x-=valor  | Equivalente a x=x-valor |
+| \*=  | x\*=valor | Equivalente a x=x\*valor |
+| /= | x/=valor  | Equivalente a x=x/valor |
+
+### Constantes
+
+Una constante es una variable de sólo lectura. Dicho de otro modo más correcto, es un valor que no puede variar (por lo tanto no es una variable).
+
+La forma de declarar constantes es la misma que la de crear variables, sólo que hay que anteponer la palabra final que es la que indica que estamos declarando una constante y por tanto no podremos variar su valor inicial:
+```
+final double PI=3.141591;
+PI=4; //Error, no podemos cambiar el valor de PI
+```
+Como medida aconsejable, los nombres de las constantes deberían ir en mayúsculas.
+
+### Expresiones
+
+Un expresión puede contener constantes, variables y operadores para formar una instrucción sintácticamente correcta. Por el hecho de poder emplear varios operadores en la misma expresión nos encontramos con la necesidad de conocer el orden de evaluación de los operadores: 
+- Prioridades de evaluación:
+  - Paréntesis
+  - Operadores unarios
+  - Operadores aritméticos (\*,/,%,+,-)
+  - Operadores relacionales
+  - Operadores lógicos
+  - Operadores de asignación
+
+### Escritura por pantalla
+
+Instrucciones que podemos utilizar para escribir por pantalla:
+- System.out.println (System es el paquete donde se encuentra el método out.println que es el presenta información en pantalla. Al acabar de escribir introduce un salto de línea)
+- System.out.print (System es el paquete donde se encuentra el método out.print que presenta información en pantalla. Al contrario que el método anterior, no realiza un salto de línea al acabar de escribir)
+- System.out.printf (System es el paquete donde se encuentra el método out.printf que presenta información en pantalla con un determinado formato)
+Ejemplos:
+```
+System.out.println("Hola, mi primer programa");
+System.out.println("\”Hola, mi primer programa\”");
+System.out.println("Hola, mi primer programa, está en c:\\");
+```
+
+#### Orden printf
+
+La orden printf() utiliza unos códigos de conversión para indicar de qué tipo es el contenido a mostrar. Estos códigos se caracterizan porque llevan delante el símbolo %. Algunos de ellos son:
+- %c: Escribe un carácter
+- %s: Escribe una cadena de texto.
+- %d: Escribe un entero.
+- %f: Escribe un número en punto flotante.
+- %e: Escribe un número en punto flotante en notación científica.
+Por ejemplo, si queremos escribir el número float 12345.1684 con el punto de los miles y sólo dos cifras decimales la orden sería:
+```
+System.out.printf("% ,.2f\n", 12345.1684);
+```
+Esta orden mostraría el número 12.345,17 por pantalla.
+
+### Lectura por teclado
+
+La lectura de teclado, es más complicada que la escritura. Se puede hacer de tres formas distintas:
+1. Visualizando una caja por pantalla: 
+Hay que incluir el paquete javax.swing y utilizar la clase JOptionPane:
+import javax.swing.JOptionPane;
+Esta clase está pensada para manejar cuadros de diálogo. Uno de estos cuadros permite introducir datos y almacenarlos en una variable. Los datos que devuelve el diálogo, son de tipo String, por lo que habrá que recogerlos en una variable String y luego convertirlos al tipo de dato deseado.
+	String texto; //variable para almacenar los datos recogidos por la caja de texto
+	int num;
+	texto =JOptionPane.showInputDialog(“Escriba un numero”);
+	num = Integer.parseInt(texto);
+Para convertir el dato recogido por teclado al tipo de dato que nosotros deseamos, usaremos una de las siguientes funciones:
+Integer.parseInt convierte a int
+Short.parseShort convierte a short
+Byte.parseByte convierte a byte
+Long.parseLong convierte a long
+Float.parseFloat convierte a float
+Double.parseDouble convierte a double
+Boolean.parseBoolean convierte a boolean
+![imagen](https://user-images.githubusercontent.com/86012760/178350879-854c37f0-2982-494e-b160-4ca8892b5447.png)
 
 
 
