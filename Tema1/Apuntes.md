@@ -462,22 +462,87 @@ Esta orden mostraría el número 12.345,17 por pantalla.
 
 La lectura de teclado, es más complicada que la escritura. Se puede hacer de tres formas distintas:
 1. Visualizando una caja por pantalla: 
-Hay que incluir el paquete javax.swing y utilizar la clase JOptionPane:
+
+- Hay que incluir el paquete javax.swing y utilizar la clase JOptionPane:
+```
 import javax.swing.JOptionPane;
+```
 Esta clase está pensada para manejar cuadros de diálogo. Uno de estos cuadros permite introducir datos y almacenarlos en una variable. Los datos que devuelve el diálogo, son de tipo String, por lo que habrá que recogerlos en una variable String y luego convertirlos al tipo de dato deseado.
-	String texto; //variable para almacenar los datos recogidos por la caja de texto
-	int num;
-	texto =JOptionPane.showInputDialog(“Escriba un numero”);
-	num = Integer.parseInt(texto);
+```
+String texto; //variable para almacenar los datos recogidos por la caja de texto
+int num;
+texto =JOptionPane.showInputDialog(“Escriba un numero”);
+num = Integer.parseInt(texto);
+```
 Para convertir el dato recogido por teclado al tipo de dato que nosotros deseamos, usaremos una de las siguientes funciones:
-Integer.parseInt convierte a int
-Short.parseShort convierte a short
-Byte.parseByte convierte a byte
-Long.parseLong convierte a long
-Float.parseFloat convierte a float
-Double.parseDouble convierte a double
-Boolean.parseBoolean convierte a boolean
-![imagen](https://user-images.githubusercontent.com/86012760/178350879-854c37f0-2982-494e-b160-4ca8892b5447.png)
+- Integer.parseInt convierte a int
+- Short.parseShort convierte a short
+- Byte.parseByte convierte a byte
+- Long.parseLong convierte a long
+- Float.parseFloat convierte a float
+- Double.parseDouble convierte a double
+- Boolean.parseBoolean convierte a boolean
 
+2. Usando la clase System:
 
+Con esta opción, se va a capturar el contenido de System.in, mediante el uso de dos clases que se encuentran dentro del paquete java.io (import java.io.\*). Estas dos clases son:
+- InputStreamReader: Captura los bytes del buffer (System.in) y los convierte a caracteres.
+- BufferedReader: Clase que proporciona un método que permite leer hasta el final de la línea.
+Código ejemplo:
+```
+InputStreamReader isr = new InputStreamReader(System.in);
+BufferedReader br = new BufferedReader(isr);
+System.out.print("Introduce el texto: ");
+String cad = br.readLine();
+```
+En este caso, también habrá que hacer una conversión del tipo de dato String al tipo de dato que se desee:
+```
+int num = Integer.parseInt(cad));
+```
 
+3. Usando la clase Scanner: 
+
+Java a partir de la versión 1.5, incorpora una nueva clase Scanner (import java.util.Scanner), la cual permite leer tipo de datos (int, float, String, etc.), a través de la consola de la aplicación. A continuación, se presenta un ejemplo de su utilización:
+```
+// Creamos objeto teclado
+Scanner teclado = new Scanner(System.in);
+// Declaramos variables a utilizar
+String nombre;
+int edad;
+boolean estudias;
+float salario;
+// Entrada de datos
+System.out.println("Nombre: ");
+nombre=teclado.nextLine();
+System.out.println("Edad: ");
+edad=teclado.nextInt();
+System.out.println("Estudias: ");
+estudias=teclado.nextBoolean();
+System.out.println("Salario: ");
+salario=teclado.nextFloat();
+```
+
+### Tipos enumerados
+
+Los tipos de datos enumerados son una forma de declarar una variable con un conjunto restringido de valores. Por ejemplo, los días de la semana, las estaciones del año, los meses, etc. Es como si definiéramos nuestro propio tipo de datos.
+Ejemplo: En una aplicación para venta de café en vasos de diferentes tamaños. Queremos que los tamaños sean algunos de los siguientes: PEQUEÑO, MEDIANO o GRANDE.
+La forma de declararlos es con la palabra reservada enum, seguida del nombre de la variable y la lista de valores que puede tomar entre llaves. A los valores que se colocan dentro de las llaves se les considera como constantes, van separados por comas y deben ser valores únicos.
+Definición: public enum <nomb_enum> {<lista_valores que toma>};
+Ejemplo: 
+
+```
+enum TamanoDeCafe{PEQUEÑO,MEDIANO,GRANDE};
+```
+Para utilizarla, únicamente hará falta definir una variable del tipo de enumerado definido.
+Llamada: <nomb_enum> <nomb_variable_enum>;
+Ejemplo: 
+
+```
+TamanoDeCafe tdc;
+```
+Una vez definida una variable del tipo de enumerado, se le podrá da a esta uno de los valores expecificados.
+Utilización: <nomb_variable_enum> = <nomb_enum>.<valor>
+Ejemplo: Posteriormente, al elegir un tamaño de café podemos hacerlo de la siguiente manera:
+```
+tdc = TamanoDeCafe.MEDIANO;
+```
