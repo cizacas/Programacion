@@ -229,7 +229,7 @@ En Java tenemos 8 tipos de datos primitivos:
 
 En este momento estamos en condiciones de hacer nuestro primer ejercicio en Java. Haremos el ejercicio 1 de la siguiente hoja de ejercicios:
 
-[Hoja de ejercicios 1](ejercicios/Hoja01_Java_01.pdf)
+[Hoja de ejercicios 1](Ejercicios/Hoja01_Java_01.pdf)
 
 
 
