@@ -3,3 +3,5 @@ plugins:
   - jemoji
 relative_links:
   enabled: true
+
+theme: jekyll-theme-cayman
