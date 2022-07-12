@@ -227,7 +227,7 @@ En Java tenemos 8 tipos de datos primitivos:
 | boolean  | 16  | conjunto de caracteres UNICODE ISO |
 | char  | 8 | True o False |
 
-En este momento estamos en condiciones de hacer nuestro primer ejercicio en Java. Haremos el ejercicio 1 de la siguiente hoja de ejercicios:
+En este momento estamos en condiciones de hacer nuestro primer ejercicio en Java. Haremos el ejercicio 1 y el ejercicio 2 apartados a. y b. de la siguiente hoja de ejercicios:
 
 [Hoja de ejercicios 1](Ejercicios/Hoja01_Java_01.pdf)
 
