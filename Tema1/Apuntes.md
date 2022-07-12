@@ -83,7 +83,7 @@ Os dejo un enlace por si queréis consultar un poco de la historia de Java y con
 
 Tenemos que distinguir entre el JRE de Java y el JDK de Java. Para ello vamos a echar un vistazo al siguiente enlace:
 
-    [Enlace a la página de Java](https://www.java.com/es/download/help/techinfo_es.html)
+[Enlace a la página de Java](https://www.java.com/es/download/help/techinfo_es.html)
 
 Una vez que nos ha quedado clara la diferencia entre JRE y JDK, vamos a instalar el JDK, que ya incluye el JRE. La versión que tendríamos que instalar es el último JDK LTS, es decir, la versión que Oracle asegura que va a tener soporte durante más tiempo. Para ello tenemos que ir a la siguiente página, descargar el archivo elegido, e instalarlo en nuestro equipo.
 
