@@ -442,6 +442,7 @@ Ejemplos:
 System.out.println("Hola, mi primer programa");
 System.out.println("\”Hola, mi primer programa\”");
 System.out.println("Hola, mi primer programa, está en c:\\");
+System.out.print("Hola, mi primer programa\n");
 ```
 
 #### Orden printf
