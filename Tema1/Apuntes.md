@@ -308,15 +308,20 @@ También hay una serie de caracteres especiales que van precedidos por el símbo
 
 Ya se ha comentado la necesidad de uso del operador de casting para poder realizar asignaciones entre tipos distintos. Como resumen véanse estos ejemplos:
 ```
-int a; byte b=12;  a=b;
+int a; 
+byte b=12;  
+a=b;
 ```
 El código anterior es correcto porque un dato byte es más pequeño que uno int y Java le convertirá de forma implícita. Lo mismo pasa de int a double por ejemplo. Sin embargo en:
 ```
-int a=1; byte b; b=a; //error
+int a=1; 
+byte b; 
+b=a; //error
 ```
 El compilador devolverá error aunque el número 1 sea válido para un dato byte. Para ello hay que hacer un casting. Eso significa poner el tipo deseado entre paréntesis delante de la expresión.
 ```
-int a=1; byte b;
+int a=1; 
+byte b;
 b= (byte) a; //correcto
 ```
 En el siguiente ejemplo:
@@ -363,6 +368,14 @@ Tenemos los siguientes tipos:
 | /  | Divide dos operandos  |
 | %  | Calcula el resto de dividir el operador1 entre el operador2   |
 
+
+**Realiza los siguientes ejercicios:**
+
+1. Pedir al usuario su edad y mostrar la que tendrá el próximo año.
+2. Escribir una aplicación que pide el año actual y el de nacimiento del usuario. Debe calcular su edad, suponiendo que en el año en curso el usuario ya ha cumplido años.
+3. El tipo short permite almacenar valores comprendidos entre -32768 y 32767. Escribir un programa que compruebe el rango de valores de un tipo se comporta de forma cíclica, es decri, el valor siguiente al máximo es el valor mínimo.
+4. Crear una aplicación que calcule la media aritmética de dos notas enteras. Hay que tener en cuenta que la media puede contener decimales.
+
 #### Incrementales o unarios
 
 | Operador | Uso | Descripción |
@@ -391,6 +404,11 @@ System.out.println(y); // imprime 6
 | == | x==y  | x es igual a y |
 | !=  | x!=y  | x es distinto de y |
 
+**Realiza los siguientes ejercicios:**
+
+1. Realizar una aplicación que solicite al usuario su edad y le indique si es mayor de edad (mediante un booleano: true o false).
+2. Escribir un programa que pida un número al usuario e indique mediante un literal booleano si el número es par.
+
 #### Lógicos
 
 | Operador | Uso | Devuelve verdadero |
@@ -398,6 +416,11 @@ System.out.println(y); // imprime 6
 | &&(and)  | condicion1&&condicion2  | condicion1 y condicion2 verdaderas  |
 | ||(or)  | condicion1||condicion2  | condicion1 o condicion2 verdaderas |
 | !(not)  | !condicion  | condicion falsa |
+
+**Realiza el siguiente ejercicio:**
+
+1. Diseña un algoritmo que nos indique si podemos salir a la calle. Existen aspectos que influirán en esta decisión: si está lloviendo y si hemos terminado nuestras tareas. Solo podremos salir a la calle si no está lloviendo y hemos finalizado nuestras tareas. Existe una opción en la que, indistintamente de lo anterior, podremos salir a la calle: el hecho de que tengamos que ir a la biblioteca. Solicitar al usuario mediante booleano si llueve, si ha finalizado las tareas y si necesita ir a la biblioteca. El algoritmo debe mostrar mediante booleano si es posible que se le otorgue el permiso de salir a la calle.
+
 
 #### De asignación
 
@@ -408,6 +431,11 @@ System.out.println(y); // imprime 6
 | -=  | x-=valor  | Equivalente a x=x-valor |
 | \*=  | x\*=valor | Equivalente a x=x\*valor |
 | /= | x/=valor  | Equivalente a x=x/valor |
+
+**Realiza los siguientes ejercicios:**
+
+1. Un frutero necesita calcular los beneficios anuales que obtiene de la venta de manzanas y peras. Por este motivo, es necesario diseñar una aplicación que solicite las ventas (en kilos) de cada semestre para cadea fruta. La aplicación mostrará el importe total sabiendo que el precio del kilo de manzanas está fijado a 2.35€ y el kilo de peras en 1,95€.
+
 
 ### Constantes
 
