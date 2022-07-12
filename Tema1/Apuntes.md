@@ -547,3 +547,8 @@ Ejemplo: Posteriormente, al elegir un tamaño de café podemos hacerlo de la sig
 ```
 tdc = TamanoDeCafe.MEDIANO;
 ```
+
+## HOJAS DE EJERCICIOS
+
+[Hoja de ejercicios 1](Ejercicios/Hoja01_Java_01.pdf)
+[Hoja de ejercicios 2](Ejercicios/Hoja02_Java_01.pdf)
