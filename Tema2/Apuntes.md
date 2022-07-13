@@ -223,13 +223,13 @@ System.out.println("El color de la carpa es: "+ carpa.getColor());
 ```
 ## EJERCICIOS
 
-[Hoja de ejercicios 1](Ejercicios/Hoja01_POO_01.pdf)
+[Hoja de ejercicios 1](Ejercicios/Hoja01_POO_02.pdf)
 
 [Hoja de ejercicios 2](Ejercicios/Hoja02_POO_02.pdf)
 
-[Hoja de ejercicios 3](Ejercicios/Hoja03_POO_03.pdf)
+[Hoja de ejercicios 3](Ejercicios/Hoja03_POO_02.pdf)
 
-[Hoja de ejercicios 4](Ejercicios/Hoja04_POO_04.pdf)
+[Hoja de ejercicios 4](Ejercicios/Hoja04_POO_02.pdf)
 
 
 
