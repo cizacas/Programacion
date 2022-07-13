@@ -130,7 +130,7 @@ Como ya hemos comentado, existen muchas más funciones que podeis probar e inves
 
 ## EJERCICIOS
 
-[Hoja de ejercicios 1](Ejercicios/Hoja01_POO_Strings02.pdf)
+[Hoja de ejercicios 1](Ejercicios/Hoja01_POO_String02.pdf)
 
-[Hoja de ejercicios 2](Ejercicios/Hoja02_POO_Strings02.pdf)
+[Hoja de ejercicios 2](Ejercicios/Hoja02_POO_String02.pdf)
 
