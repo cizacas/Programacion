@@ -4,11 +4,15 @@ Apuntes de programación del CFGS de Desarrollo de Aplicaciones Multiplataforma.
 
 ## Indice 🚀
 
-[Tema 1. Elementos de un programa informático.](Tema1/Apuntes.md)
+**1. UNIDAD 1. Elementos de un programa informático.**
 
-[Antes del Tema 2. Cadenas de texto en Java.](Tema2/Strings.md)
+  [Apuntes de la Unidad 1.](Tema1/Apuntes.md)
+  
+**2. UNIDAD 2. Utilización de objetos y desarrollo de clases.**
 
-[Tema 2. Utilización de objetos y desarrollo de clases.](Tema2/Apuntes.md)
+  [Cadenas de texto en Java.](Tema2/Strings.md)
+  
+  [Apuntes de la Unidad 2.](Tema2/Apuntes.md)
 
 
 
