@@ -77,3 +77,60 @@ Es un método que permite extraer una subcadena dada, indicando la posición ini
 System.out.println("*****Extraccion de una subcadena*****");
 System.out.println("Subcadena de la cadena ciclo entre las posiciones 3 y 6: "+ciclo.substring(3,6);
 ```
+
+### Igualdad de dos cadenas
+
+Si queremos averiguar si dos cadenas son iguales, o lo podemos hacer con el operador == como con el resto de tipos simples. Para ello tenemos que utilizar el metodo equals, que devuielve true si ambas cadenas son iguales. 
+
+```
+System.out.println("*****COMPARACIÓN ENTRE CADENAS*****);
+String texto1="Buenos días";
+String texto2=new String("Buenos días");
+System.out.println("¿Las cadenas son iguales?: "+texto1.equals(texto2));
+System.out.println("¿Las cadenas son iguales?: " + texto1==texto2); // El resultado de esta instrucción puede ser incorrecto.
+```
+
+Al preguntar si dos cadenas son iguales, distingue si está en mayúsculas o minúsculas. Si necesitamos preguntar sin distinguir mayúsculas de minúsculas, utilizamos equalsIgnoreCase().
+
+```
+System.out.println("*****COMPARACIÓN ENTRE CADENAS*****);
+String texto1="Buenos días";
+String texto2=new String("BUENOS DÍAS");
+System.out.println("¿Las cadenas son iguales?: "+texto1.equalsIgnoreCase(texto2));
+```
+
+Otro modo de comparar cadenas, para saber si una es mayor que la otra, es con el método compareTo. Este método devuelve un entero >0, <0 o =0. Veamos un ejemplo:
+
+```
+System.out.println("*****COMPARACIÓN ENTRE CADENAS*****);
+String texto1="Buenos días";
+String texto2=new String("Buenos dias");
+if (texto1.compareTo(texto2)>0)
+  System.out.println("texto1 es superior a texto2");
+else if(texto1.compareTo(texto2)<0)
+  System.out.println("texto1 es inferior a texto2");
+else
+  System.out.println("texto1 y texto2 son iguales");
+```
+
+### Otras funciones de Strings
+
+Existen un montón de funciones para trabajar con Strings en Java. Si os vais a la API de Java, podéis buscar la clase String y veréis todas las que hay. Algunas de ellas son las siguientes:
+
+- startsWith(subcadena) y endsWith(subcadena): para comprobar si una cadena comienza o finaliza con una subcadena determinada.
+- trim(): elimina los espacios en blanco de una cadena que tenga por delante o por detrás. No elimina los espacios intermedios.
+- toUpperCase() y to LowerCase(): me permite cambiar todos los caracteres por mayúsculas o minúsculas.
+- indexOf(cadenaABuscar): permite buscar una cadena dentro de otra.
+- indexOf(cadenaABuscar,posicion): igual que la anterior, pero desde una posición determinada.
+- replace(cadenaABuscar, cadenaSustituta): permite reemplazar una cadena por otra.
+- lastIndexOf (String cad): Retorna la posición de la ultima ocurrencia de la cadena dada como parámetro.
+- lastIndexOf (String cad,int ini): Retorna la posición de la última ocurrencia de la cadena dada como parámetro buscando en retroceso a partir de la posición dada como parámetro.
+
+Como ya hemos comentado, existen muchas más funciones que podeis probar e investigar por vuestra cuenta.
+
+## EJERCICIOS
+
+[Hoja de ejercicios 1](Ejercicios/Hoja01_POO_Strings02.pdf)
+
+[Hoja de ejercicios 2](Ejercicios/Hoja02_POO_Strings02.pdf)
+
