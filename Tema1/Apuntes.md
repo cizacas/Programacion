@@ -357,6 +357,7 @@ Tenemos los siguientes tipos:
 - Relacionales
 - Lógicos
 - De asignación
+- Ternario
 
 #### Aritméticos
 
@@ -432,10 +433,31 @@ System.out.println(y); // imprime 6
 | \*=  | x\*=valor | Equivalente a x=x\*valor |
 | /= | x/=valor  | Equivalente a x=x/valor |
 
-**Realiza los siguientes ejercicios:**
+**Realiza el siguiente ejercicio:**
 
 1. Un frutero necesita calcular los beneficios anuales que obtiene de la venta de manzanas y peras. Por este motivo, es necesario diseñar una aplicación que solicite las ventas (en kilos) de cada semestre para cadea fruta. La aplicación mostrará el importe total sabiendo que el precio del kilo de manzanas está fijado a 2.35€ y el kilo de peras en 1,95€.
 
+#### Ternario
+
+Este operador devuelve un valor que se selecciona de dos posibles. La selección dependerá de la evaluación de uan expresión relacional o lógica que, como hemos visto, puede tomar dos valores: verdadero o falso.
+
+El operador tiene la siguiente sintáxis:
+```
+expresioncondicional ? valor1 : valor2
+```
+
+La evaluación de la expresión decidirá cuál de los dos posibles valores se devuelve. En el caso de que la expresión resulte cierta, se devuelve valor1, y cuando la expresión resulte false, valor2.
+
+Ejemplo:
+
+```
+int a,b;
+a=3<5 ? 1 : -1; //3<5 es cierto: así que a toma el valor 1.
+b= a == 7 ?10:20; // a (que vale 1) == 7 es falso, así que b toma el valor 20
+```
+**Realiza el siguiente ejercicio:**
+
+1. Escribir un programa que pida un número al usuario y muestre su valor absoluto.
 
 ### Constantes
 
