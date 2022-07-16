@@ -482,3 +482,28 @@ Con una llamada a ese método con factorial(4); usando el ejemplo anterior, la e
 - Eso hace que la llamada factorial(2) devuelva 2\*1, es decir 2
 - Eso hace que la llamada factorial(3) devuelva 3\*2, es decir 6
 - Por lo que la llamada factorial(4) devuelve 4\*6, es decir 24 Y ese es ya el resultado final
+
+## EJERCICIOS
+
+[Hoja de ejercicios 1](Ejercicios/Hoja01_POO_02.pdf)
+
+[Hoja de ejercicios 2](Ejercicios/Hoja02_POO_02.pdf)
+
+[Hoja de ejercicios 3](Ejercicios/Hoja03_POO_02.pdf)
+
+[Hoja de ejercicios 4](Ejercicios/Hoja04_POO_02.pdf)
+
+[Hoja de ejercicios 5](Ejercicios/Hoja05_POO_02.pdf)
+
+[Hoja de ejercicios 6](Ejercicios/Hoja06_POO_02.pdf)
+
+[Hoja de ejercicios 7](Ejercicios/Hoja07_POO_02.pdf)
+
+[Hoja de ejercicios 8](Ejercicios/Hoja08_POO_02.pdf)
+
+[Hoja de ejercicios 9](Ejercicios/Hoja09_POO_02.pdf)
+
+[Hoja de ejercicios 10](Ejercicios/Hoja10_POO_02.pdf)
+
+[Hoja de ejercicios 11](Ejercicios/Hoja11_POO_02.pdf)
+
