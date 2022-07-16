@@ -231,5 +231,254 @@ System.out.println("El color de la carpa es: "+ carpa.getColor());
 
 [Hoja de ejercicios 4](Ejercicios/Hoja04_POO_02.pdf)
 
+### Modificadores de acceso
 
+Se trata de una palabra que antecede a la declaración de una clase, método o propiedad de clase. Hay tres posibilidades: public, protected y private. Una cuarta posibilidad es no utilizar ninguna de estas tres palabras; entonces se dice que se ha utilizado el modificador por defecto (friendly). En la siguiente tabla se puede observar la visibilidad de cada especificador:
 
+|  | La misma clase | Otra clase del mismo paquete | Subclase de otro paquete | Otra clase de otro paquete |
+| ------ | ------ | ------ | ------- | ------ |
+| public | X | X | X | X |
+| protected | X | X | X |  |
+| default | X | X |  |  |
+| private | X |  |  |  |
+
+El modificador debe de indicarse antes de indicar el tipo de datos de la propiedad o el método. Por ejemplo:
+
+```
+public class Noria
+{
+  private double radio;
+  public void girar(int velocidad)
+  {
+    //...
+    //definición del método
+   }
+   public void parar()
+   {
+    //..
+   }
+}
+```
+
+### Definir atributos
+
+Cuando se definen los datos de una determinada clase, se debe indicar el tipo de atributo que es (String, int, double, ...) y el especificador de acceso (public, private,...). 
+Ejemplo:
+
+```
+public class Persona
+{
+  public String nombre; //se puede acceder desde cualquier clase
+  private int contraseña;  //solo se puede acceder desde la clase Persona
+  protected String dirección;  //Acceden a esta propiedad esta clase y sus descendientes
+}
+```
+
+Por lo general los atributos de una clase suelen ser privados o protegidos, a no ser que se trate de un valor constante, en cuyo caso se declararán como públicos. Además pueden ser inicializados.
+
+### Atributos finales
+
+Los atributos de una clase pueden utilizar el modificador final, para que se conviertan en valores no modificables en el objeto. De ser así, se debe iniciar el valor del atributo en la construcción del objeto
+
+```
+public class Alumno 
+{
+    private final String INSTITUTO = "Miguel Herrero";
+    //…
+}
+```
+
+### Definir métodos
+
+Un **método** es una llamada a una operación de un determinado objeto. La mayoría de métodos devuelven un resultado (gracias a la palabra return), por ello cuando se define el método hay que indicar el tipo de datos al que pertenece el resultado del mismo. 
+Si el método no devuelve ningún resultado se indica como tipo de datos a devolver el tipo **void** (void significa vacío).
+
+Los métodos están asociados a una clase. Es una operación que esa clase es capaz de realizar. Cuando una clase ya tiene definido sus métodos, es posible invocarles utilizando los objetos definidos de esa clase. En esa invocación, se deben indicar los **parámetros** (o argumentos) que cada método requiere para poder realizar su labor.
+
+Para construir un método necesitamos definir:
+1. **Sus especificadores de alcance o visibilidad**: si el alcance es privado, el método sólo se podrá utilizar dentro de otro método en la misma clase; si el público podrá ser invocado desde cualquier clase; si es protegido desde la propia clase y sus descendientes y si no ponemos nada, desde clases que estén en el mismo paquete.
+2. **El tipo de datos o de objeto que devuelve**: si el resultado del método es un número entero, o un booleano, o un String o un objeto de una clase determinada, etc. Si el método no devuelve valor alguno se debe indicar como tipo el valor void.
+3. **El identificador del método**: sigue las mismas reglas que para el nombre de las variables
+4. **Los parámetros**: pueden necesitar datos para realizar su tarea. 
+5. **El cuerpo del método**: el código que permite al método realizar su tarea.
+
+```
+    public double sueldo()
+    {
+        double salario = 0;
+        if(antigüedad < 10 && antigüedad>0)
+            salario = 12*horas;
+        else if(antigüedad >= 10 && antigüedad <25)
+            salario = 13*horas;
+        else if(antigüedad >=25)
+            salario = 14*horas;
+        
+        return salario;
+    }
+```
+
+### Sobrecarga de métodos
+
+Java posee esa propiedad ya que admite sobrecargar los métodos. Esta propiedad ya la habíamos visto con los constructores. 
+
+Esto significa crear distintas variantes del mismo método. Se puede definir más de un método con el mismo nombre, pero se diferencian en los parámetros que este método recibe.
+
+Vemos un ejemplo:
+
+```
+public class Matemáticas
+{
+	public double suma(double x, double y) 
+	{
+		return x+y;
+	}
+	public double suma(double x, double y, double z)
+	{
+		return x+y+z;
+	}
+	public double suma(int numero1, int numero2)
+	{
+		return numero1 + numero2;
+	}
+}
+```
+### La referencia this
+
+Los objetos pueden hacer referencia a sí mismos, para ello disponen de la palabra this. Se utiliza dentro del código de las clases para obtener una referencia al objeto actual y permitir evitar ambigüedad y realizar llamadas a métodos que de otra forma serían complicadas.
+
+Los posibles usos de this son:
+- **this**: referencia al objeto actual. Se usa por ejemplo pasarle como parámetro a un método cuando es llamado desde la propia clase.
+- **this.atributo**: para acceder a una propiedad del objeto actual.
+- **this.método(parámetros)**: permite llamar a un método del objeto actual con los parámetros indicados.
+- **this(parámetros)**: permite llamar a un constructor del objeto actual. Esta llamada sólo puede ser empleada en la primera línea de un constructor.
+
+```
+public class Punto 
+{
+     private int posX;
+     private int posY;
+     public void modificarCoords(int posX, int posY)
+     {
+                 this.posX=posX; 
+                 this.posY=posY;
+     }
+}
+```
+
+### Constructores
+
+Cuando se crea un objeto mediante el operador new las propiedades toman un valor inicial:
+
+- O bien el valor que Java asigna por defecto
+- O se utiliza la asignación en su declaración
+
+Pero esta forma no suele ser la más habitual. En su lugar se utilizan los constructores.
+
+Un constructor es un método que se invoca cuando se crea un objeto y que sirve para iniciar los atributos del objeto. Siempre hay al menos un constructor, el constructor por defecto. Ese es un constructor que le crea el compilador en caso de que nosotros no creemos ninguno y se invoca cuando la creación es como:
+
+```
+Alumno a=new Alumno();
+```
+
+Pero nosotros podremos crear los nuestros. Un constructor no es más que un método que tiene el mismo nombre que la clase.
+
+Ejemplo 1. En este ejemplo se ve una clase con un constructor definido por el usuario, y el uso que se hace de el desde el programa principal.:
+```
+public class Noria 
+{
+	private double radio;
+	public Noria(double radio){
+		this.radio = radio;
+	}
+}
+
+public class Principal
+{
+           public static void main(String args[])
+           {
+                Noria n = new Noria(10);
+           }
+}
+```
+En este caso, como tenemos un constructor definido por el usuario, no podríamos utilizar el constructor por defecto (el que no tiene parámetros). Si lo necesitáramos, tendríamos que definirlo en la clase. Vemos el ejemplo2:
+
+```
+public class Noria 
+{
+	private double radio;
+	public Noria(){
+		this.radio = 55;
+	}
+	public Noria(double radio){
+		this.radio = radio;
+	}
+}
+
+public class Principal
+{
+           public static void main(String args[])
+           {
+	Noria n1 = new Noria();
+                 Noria n2 = new Noria(10);
+           }
+}
+```
+
+Existe otro tipo de constructor denominado **Constructor copia**.Recibe por argumento un objeto del mismo tipo, y le asigna los valores del objeto pasado por parámetro a la nueva instancia del objeto.
+Se utiliza para copiar un objeto en otro. Vemos un ejemplo:
+
+```
+public class Noria 
+{
+	private double radio;
+	public Noria(){
+		this.radio = 55;
+	}
+	public Noria(double radio){
+		this.radio = radio;
+	}
+  public Noria(Noria n){
+    this.radio=n.radio;
+  }
+}
+
+public class Principal
+{
+           public static void main(String args[])
+           {
+	               Noria n1 = new Noria();
+                 Noria n2 = new Noria(10);
+                 Noria n3 = new Noria(n2);
+           }
+}
+```
+
+### Métodos recursivos
+
+La recursividad es una técnica de escritura de métodos o funciones, pensada para problemas complejos. La idea parte de que un método puede invocarse a sí mismo. Esta técnica es peligrosa ya que se pueden generar fácilmente llamadas infinitas.
+
+Como ejemplo vamos a ver la versión recursiva del factorial:
+
+```
+public class Matematicas
+{
+     public double factorial(int n)
+     {
+	if(n<=1) 
+	     return 1;
+	else 
+	     return n*factorial(n-1);
+      }
+}
+```
+
+Con una llamada a ese método con factorial(4); usando el ejemplo anterior, la ejecución del programa generaría los siguientes pasos:
+
+- Se llama a la función factorial usando como parámetro el número 4 que será copiado en el parámetro n
+- Como n>1, entonces se devuelve 4 multiplicado por el resultado de la llamada factorial(3)
+- La llamada anterior hace que el nuevo n (variable distinta de la anterior) valga 3, por lo que esta llamada devolverá 3 multiplicado por el resultado de la llamada factorial(2)
+- La llamada anterior devuelve 2 multiplicado por el resultado de la llamada factorial(1)
+- Esa llamada devuelve 1
+- Eso hace que la llamada factorial(2) devuelva 2\*1, es decir 2
+- Eso hace que la llamada factorial(3) devuelva 3\*2, es decir 6
+- Por lo que la llamada factorial(4) devuelve 4\*6, es decir 24 Y ese es ya el resultado final
