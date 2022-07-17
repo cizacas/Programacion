@@ -493,6 +493,8 @@ Con una llamada a ese método con factorial(4); usando el ejemplo anterior, la e
 
 [Hoja de ejercicios 4](Ejercicios/Hoja04_POO_02.pdf)
 
+[Hoja de ejercicios 2](Ejercicios/Hoja02_POO_String02.pdf)
+
 [Hoja de ejercicios 5](Ejercicios/Hoja05_POO_02.pdf)
 
 [Hoja de ejercicios 6](Ejercicios/Hoja06_POO_02.pdf)
