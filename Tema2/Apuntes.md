@@ -485,16 +485,6 @@ Con una llamada a ese método con factorial(4); usando el ejemplo anterior, la e
 
 ## EJERCICIOS
 
-[Hoja de ejercicios 1](Ejercicios/Hoja01_POO_02.pdf)
-
-[Hoja de ejercicios 2](Ejercicios/Hoja02_POO_02.pdf)
-
-[Hoja de ejercicios 3](Ejercicios/Hoja03_POO_02.pdf)
-
-[Hoja de ejercicios 4](Ejercicios/Hoja04_POO_02.pdf)
-
-[Hoja de ejercicios 2](Ejercicios/Hoja02_POO_String02.pdf)
-
 [Hoja de ejercicios 5](Ejercicios/Hoja05_POO_02.pdf)
 
 [Hoja de ejercicios 6](Ejercicios/Hoja06_POO_02.pdf)
