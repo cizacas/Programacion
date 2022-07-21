@@ -446,13 +446,31 @@ public class Principal
 {
            public static void main(String args[])
            {
-	               Noria n1 = new Noria();
+	         Noria n1 = new Noria();
                  Noria n2 = new Noria(10);
                  Noria n3 = new Noria(n2);
            }
 }
 ```
+### Métodos estáticos
 
+Un método estático es aquel que no requiere de ningún objeto para ejecutarse y, por tanto, no puede utilizar ningún atributo que no sea estático. (Los atributos estáticos los veremos más adelante). En caso de intentarlo, se produce un error.
+
+La forma de invocar un método estático es, en lugar de poniendo el nombre del objeto que realiza la llamada delante, se pone el nombre de la clase. Veamos un ejemplo:
+
+```
+public class Persona{
+	private String nombre;
+	public Persona(){
+		nombre="";
+	}
+	public Persona(String nombre){
+		this.nombre=nombre;
+	}
+	public static nombreClase(){
+		
+	
+	
 ### Métodos recursivos
 
 La recursividad es una técnica de escritura de métodos o funciones, pensada para problemas complejos. La idea parte de que un método puede invocarse a sí mismo. Esta técnica es peligrosa ya que se pueden generar fácilmente llamadas infinitas.
