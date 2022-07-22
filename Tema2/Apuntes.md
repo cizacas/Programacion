@@ -424,7 +424,9 @@ public class Principal
 }
 ```
 
-Existe otro tipo de constructor denominado **Constructor copia**.Recibe por argumento un objeto del mismo tipo, y le asigna los valores del objeto pasado por parámetro a la nueva instancia del objeto.
+#### Constructor copia 
+
+Existe otro tipo de constructor denominado **Constructor copia**. Recibe por argumento un objeto del mismo tipo, y le asigna los valores del objeto pasado por parámetro a la nueva instancia del objeto.
 Se utiliza para copiar un objeto en otro. Vemos un ejemplo:
 
 ```
