@@ -467,8 +467,19 @@ public class Persona{
 	public Persona(String nombre){
 		this.nombre=nombre;
 	}
-	public static nombreClase(){
-		
+	public static void nombreClase(){
+		System.out.println("Soy la clase Persona");
+	}
+}
+
+public class Ejemplo{
+	public static void main(String args[]){
+		Persona.nombreClase();
+	}
+}
+```
+
+La invocación o llamada al método estático se hace desde el programa principal sin necesidad de tener definido un objeto de la clase Persona. Para poder invocar dicho método, se pone delante el nombre de la clase. 
 	
 	
 ### Métodos recursivos
