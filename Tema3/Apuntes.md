@@ -38,3 +38,36 @@ if(expresión lógica) sentencia;
 if(nota<5)
 	System.out.println("Suspenso");
 ```
+
+### IF - Sentencia condicional compuesta
+
+Es igual que la anterior, sólo que se añade un apartado else que contiene instrucciones que se ejecutarán si la expresión evaluada por el if es falsa. Sintaxis:
+
+```
+if(expresión lógica)
+{
+	instrucciones
+	….
+}
+else 
+{
+	instrucciones
+	…
+}
+
+```
+
+Como en el caso anterior, las llaves son necesarias sólo si se ejecuta más de una sentencia. Ejemplo de sentencia if-else:
+
+```
+if(nota>=5)
+{
+	System.out.println("Aprobado");
+	aprobados++;
+}
+else 
+{
+	System.out.println("Suspenso");
+	suspensos++;
+}
+```
