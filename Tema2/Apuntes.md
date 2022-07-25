@@ -526,7 +526,4 @@ Con una llamada a ese método con factorial(4); usando el ejemplo anterior, la e
 
 [Hoja de ejercicios 9](Ejercicios/Hoja09_POO_02.pdf)
 
-[Hoja de ejercicios 10](Ejercicios/Hoja10_POO_02.pdf)
-
-[Hoja de ejercicios 11](Ejercicios/Hoja11_POO_02.pdf)
 
