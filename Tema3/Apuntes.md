@@ -126,7 +126,7 @@ else if (x==3)
 ```
 ## EJERCICIOS
 
-[Hoja de ejercicios 1](Ejercicios/Hoja01_POO_02.pdf)
+[Hoja de ejercicios 1](Ejercicios/Hoja01_Estructuras_01.pdf)
 
 ### SWITCH
 
@@ -198,7 +198,7 @@ switch (diasemana)
 ```
 ## EJERCICIOS
 
-[Hoja de ejercicios 1](Ejercicios/Hoja01_POO_02.pdf)
+[Hoja de ejercicios 1](Ejercicios/Hoja01_Estructuras_02.pdf)
 
 
 
