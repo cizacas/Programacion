@@ -71,3 +71,56 @@ else
 	suspensos++;
 }
 ```
+
+
+### IF - Anidación
+
+Dentro de una sentencia if se puede colocar otra sentencia if. A esto se le llama anidación y permite crear programas donde se valoren expresiones complejas. La nueva sentencia puede ir tanto en la parte if como en la parte else.
+
+Las anidaciones se utilizan muchísimo al programar. Sólo hay que tener en cuenta que siempre se debe cerrar primero el último if que se abrió. Es muy importante también tabular el código correctamente para que las anidaciones sean legibles.
+
+El código podría ser:
+
+```
+if (x==1) 
+{
+         Instrucciones
+         …
+}
+else 
+{
+         if(x==2) 
+         {
+                 instrucciones
+                …
+          }
+          else 
+          {
+                  if(x==3) 
+                  {
+                           instrucciones
+                           …
+                   }
+           }
+}
+```
+
+Una forma más legible de escribir ese mismo código sería con la instrucción if-else-if:
+
+```
+if (x==1) 
+{
+      instrucciones
+      …
+}
+else if (x==2) 
+{
+       instrucciones
+       …
+}
+else if (x==3) 
+{
+        instrucciones
+        …
+}
+```
