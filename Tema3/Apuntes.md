@@ -124,3 +124,84 @@ else if (x==3)
         …
 }
 ```
+## EJERCICIOS
+
+[Hoja de ejercicios 1](Ejercicios/Hoja01_POO_02.pdf)
+
+### SWITCH
+
+Se la llama estructura condicional compleja porque permite evaluar varios valores a la vez. En realidad sirve como sustituta de algunas expresiones de tipo if-else-if. 
+Su sintaxis es la siguiente:
+ ```
+ switch (expresiónEntera) 
+{
+	case valor1:
+		instrucciones del valor 1
+	break;
+	case valor2:
+		instrucciones del valor 2
+	break;
+		…
+	default:
+	/*instrucciones que se ejecutan si la expresión no toma
+	ninguno de los valores anteriores*/
+	
+}
+```
+Esta instrucción evalúa una expresión (que debe ser short, int, byte o char), y según el valor de la misma ejecuta instrucciones. Cada case contiene un valor de la expresión; si efectivamente la expresión equivale a ese valor, se ejecutan las instrucciones de ese case y de los siguientes.
+
+La instrucción **break** se utiliza para salir del switch. De tal modo que si queremos que para un determinado valor se ejecuten las instrucciones de un apartado case y sólo las de ese apartado, entonces habrá que finalizar ese case con un break.
+
+El bloque default sirve para ejecutar instrucciones para los casos en los que la expresión no se ajuste a ningún case. Vemos un ejemplo:
+
+```
+switch (diasemana) 
+{ 
+     case 1:
+           texto=”Lunes”; 
+     break; 
+     case 2:
+           texto=”Martes”; 
+     break; 
+     case 3:
+           texto=”Miércoles”; 
+     break; 
+     case 4:
+           texto=”Jueves”; 
+     break; 
+     case 5:
+        texto=”Viernes”; 
+    break; 
+    case 6:
+       texto=”Sábado”; 
+    break; 
+    case 7:
+        texto=”Domingo”; 
+    break; 
+    default: 
+         texto=”?”; 
+} 
+```
+```
+switch (diasemana) 
+{
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+        laborable=true; break;
+    case 6:
+    case 7:
+        laborable=false;
+}
+```
+## EJERCICIOS
+
+[Hoja de ejercicios 1](Ejercicios/Hoja01_POO_02.pdf)
+
+
+
+
+
+
