@@ -19,15 +19,22 @@ if(expresión lógica)
 	instrucciones
 	….
 }
-```
 
-Las llaves se requieren sólo si va a haber varias instrucciones. En otro caso se puede crear el if sin llaves:
-```
-if(expresión lógica) sentencia;
 // Ejemplo:
+
 if(nota>=5)
 {
 	System.out.println("Aprobado");
 	aprobados++;
 }
+```
+
+Las llaves se requieren sólo si va a haber varias instrucciones. En otro caso se puede crear el if sin llaves:
+```
+if(expresión lógica) sentencia;
+
+// Ejemplo:
+
+if(nota<5)
+	System.out.println("Suspenso");
 ```
