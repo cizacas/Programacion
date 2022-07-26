@@ -200,8 +200,80 @@ switch (diasemana)
 
 [Hoja de ejercicios 2](Ejercicios/Hoja02_Estructuras_03.pdf)
 
+### WHILE - Sentencia repetitiva mientras
 
+La instrucción while permite crear bucles. Un bucle es un conjunto de sentencias que se repiten mientras se cumpla una determinada condición. Los bucles while agrupan instrucciones las cuales se ejecutan continuamente hasta que una condición que se evalúa sea falsa.
 
+La condición se mira antes de entrar dentro del while y cada vez que se termina de ejecutar las instrucciones del while. Sintaxis:
 
+```
+while (expresión lógica) 
+{
+sentencias que se ejecutan si la condición es true
+}
+```
+El programa se ejecuta siguiendo estos pasos:
 
+1. Se evalúa la expresión lógica 
+2. Si la expresión es verdadera ejecuta las sentencias, sino el programa abandona la sentencia while 
+3. Tras ejecutar las sentencias, volvemos al paso 1
+
+Ejemplo (escribir números del 1 al 100):
+
+```
+int i=1;
+while (i<=100)
+{
+         System.out.println(i);
+         i++;
+}
+```
+
+####  Bucles con contador
+
+Se llaman así a los bucles que se repiten una serie determinada de veces. Están controlados por un contador (o incluso más de uno). El contador es una variable que va variando su valor (de uno en uno, de dos en dos,…) en cada vuelta del bucle. Cuando el contador alcanza un límite determinado, entonces el bucle termina.
+
+En todos los bucles de contador necesitamos saber:
+
+1. Lo que vale la variable contadora al principio. Antes de entrar en el bucle
+2. Lo que varía (lo que se incrementa o decrementa) el contador en cada vuelta
+3. Las acciones a realizar en cada vuelta del bucle
+4. El valor final del contador. En cuanto se rebase el bucle termina. Dicho valor se pone como condición del bucle, pero a la inversa; es decir, la condición mide el valor que tiene que tener el contador para que el bucle se repita y no para que termine.
+
+Vemos un ejemplo:
+
+```
+i=10; //Valor inicial del contador, empieza valiendo 10 (por supuesto i debería estar declarada como entera, int) 
+while (i<=200)
+{  //condición del bucle, mientras i sea menor de 200, el bucle se repetirá, cuando i rebase este valor, el bucle termina
+        System.out.println(i); //acciones que ocurren en cada vuelta del bucle. 
+                                       //En este caso simplemente escribe el valor del contador
+        i+=10;                    //Variación del contador, en este caso cuenta de 10 en 10
+}
+```
+
+####  Bucles con centinela
+
+Es el segundo tipo de bucle básico. Se trata de preguntar a cada ciclo del bucle por una condición lógica. Si esta condición se cumple, continuamos otro ciclo más en el bucle. Cuando la condición lógica deja de cumplirse, se sale del bucle.
+
+A la condición lógica, que se la llama centinela, puede ser desde una simple variable booleana hasta una expresión lógica más compleja, y sirve para decidir si el bucle se repite o no. De modo que cuando la condición lógica se incumpla, el bucle termina.
+
+Esa expresión lógica a cumplir es lo que se conoce como centinela y normalmente la suele realizar una variable booleana.
+
+Ejemplo:
+
+```
+boolean salir=false; /* En este caso el centinela es una variable booleana que inicialmente vale falso */
+int n;
+while(salir==false) 	// Condición de repetición: que salir siga siendo falso. Ese es el centinela. 
+{	//También se podía haber escrito simplemente: while(!salir)
+        n=(int)Math.floor(Math.random()*499+1); // Lo que se repite en el bucle:
+        System.out.println(i); 	// calcular un número aletorio de 1 a 500 y escribirlo
+        salir=(i%7==0);   //El centinela vale verdadero si el número es múltiplo de 7 
+}
+```
+Un bucle podría ser incluso mixto: de centinela y de contador. 
+Por ejemplo: un programa que escriba números aleatorios de uno a 500 y se repita hasta que llegue un múltiplo de 7, pero que como mucho se repite cinco veces. ¡¡CODIFÍCALO!!
+
+NOTA: Hoja de ayuda para los números aleatorios.
 
