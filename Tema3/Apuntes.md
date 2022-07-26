@@ -281,9 +281,10 @@ NOTA: Hoja de ayuda para los números aleatorios. [Generación de números aleat
 ### DO WHILE - Sentencia repetitiva hacer mientras
 
 La única diferencia respecto a la anterior está en que la expresión lógica se evalúa después de haber ejecutado las sentencias. Es decir el bucle al menos se ejecuta una vez. Es decir los pasos son:
-Ejecutar sentencias
-Evaluar expresión lógica
-Si la expresión es verdadera volver al paso 1, sino continuar fuera del while
+
+1. Ejecutar sentencias
+2. Evaluar expresión lógica
+3. Si la expresión es verdadera volver al paso 1, sino continuar fuera del while
 
 Sintaxis:
 ```
