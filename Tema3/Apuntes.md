@@ -273,7 +273,36 @@ while(salir==false) 	// Condición de repetición: que salir siga siendo falso. 
 }
 ```
 Un bucle podría ser incluso mixto: de centinela y de contador. 
-Por ejemplo: un programa que escriba números aleatorios de uno a 500 y se repita hasta que llegue un múltiplo de 7, pero que como mucho se repite cinco veces. ¡¡CODIFÍCALO!!
+
+Ejercicio para hacer: un programa que escriba números aleatorios de uno a 500 y se repita hasta que llegue un múltiplo de 7, pero que como mucho se repite cinco veces. ¡¡CODIFÍCALO!!
 
 NOTA: Hoja de ayuda para los números aleatorios. [Generación de números aleatorios.](Tema3/Aleatorios.md)
 
+### DO WHILE - Sentencia repetitiva hacer mientras
+
+La única diferencia respecto a la anterior está en que la expresión lógica se evalúa después de haber ejecutado las sentencias. Es decir el bucle al menos se ejecuta una vez. Es decir los pasos son:
+Ejecutar sentencias
+Evaluar expresión lógica
+Si la expresión es verdadera volver al paso 1, sino continuar fuera del while
+
+Sintaxis:
+```
+do 
+{
+          instrucciones
+} while (expresión lógica)
+```
+Ejemplo (contar de uno a 1000):
+```
+int i=0;
+do 
+{
+      i++;
+      System.out.println(i);
+} while (i<1000);
+```
+Se utiliza cuando al menos las sentencias del bucle se van a repetir una vez (en un bucle while puede que incluso no se ejecuten las sentencias que hay dentro del bucle si la condición fuera falsa, ya desde un inicio).
+
+De hecho cualquier sentencia do..while se puede convertir en while. 
+
+Ejercicio para hacer: Intenta codificar el ejemplo anterior utilizando una estructura while
