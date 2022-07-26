@@ -198,7 +198,7 @@ switch (diasemana)
 ```
 ## EJERCICIOS
 
-[Hoja de ejercicios 1](Ejercicios/Hoja01_Estructuras_02.pdf)
+[Hoja de ejercicios 2](Ejercicios/Hoja1/Hoja02_Estructuras_03.pdf)
 
 
 
