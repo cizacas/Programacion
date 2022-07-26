@@ -126,7 +126,7 @@ else if (x==3)
 ```
 ## EJERCICIOS
 
-[Hoja de ejercicios 1](Ejercicios/Hoja01_Estructuras_01.pdf)
+[Hoja de ejercicios 1](Ejercicios/Hoja1/Hoja01_Estructuras_01.pdf)
 
 ### SWITCH
 
