@@ -275,5 +275,5 @@ while(salir==false) 	// Condición de repetición: que salir siga siendo falso. 
 Un bucle podría ser incluso mixto: de centinela y de contador. 
 Por ejemplo: un programa que escriba números aleatorios de uno a 500 y se repita hasta que llegue un múltiplo de 7, pero que como mucho se repite cinco veces. ¡¡CODIFÍCALO!!
 
-NOTA: Hoja de ayuda para los números aleatorios.
+NOTA: Hoja de ayuda para los números aleatorios. [Generación de números aleatorios.](Tema3/Aleatorios.md)
 
