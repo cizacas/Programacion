@@ -16,6 +16,8 @@ Apuntes de programación del CFGS de Desarrollo de Aplicaciones Multiplataforma.
 
 **3. UNIDAD 3. Estructuras de control.**
 
+  [Generación de números aleatorios.](Tema3/Aleatorios.md)
+
   [Apuntes de la Unidad 3.](Tema3/Apuntes.md)
 
 
