@@ -311,3 +311,50 @@ Ejercicio para hacer: Intenta codificar el ejemplo anterior utilizando una estru
 ## EJERCICIOS
 
 [Hoja de ejercicios 3](Ejercicios/Hoja03_Estructuras_03.pdf)
+
+### FOR - Sentencia repetitiva para
+
+Es un bucle más complejo especialmente pensado para rellenar arrays (estructura que veremos más adelante) o para ejecutar instrucciones controladas por un contador. Es decir, es un bucle que se utiliza cuando se sabe a priori cuantos ciclos va a ejecutarse. Una vez más, se ejecutan una serie de instrucciones en el caso de que se cumpla una determinada condición. 
+
+Sintaxis:
+
+```
+for(inicialización;condición;incremento)
+{
+    sentencias
+}
+```
+
+Antes de entrar en el bucle, se ejecuta la instrucción de inicialización. Se entra en el bucle mientras la condición sea verdadera. Y en cada vuelta se ejecuta la instrucción de incremento. Es decir, el funcionamiento es:
+
+1. Se ejecuta la instrucción de inicialización
+2. Se comprueba la condición
+3. Si la condición es cierta, entonces se ejecutan las sentencias. Si la condición es falsa, abandonamos el bloque for
+4. Tras ejecutar las sentencias, se ejecuta la instrucción de incremento y se vuelve al paso 2
+
+Ejemplo (contar números del 1 al 1000):
+
+```
+for(int i=1;i<=1000;i++)
+{
+    System.out.println(i);
+}
+
+```
+
+La ventaja que tiene es que el código se reduce. La desventaja es que el código es menos comprensible. El bucle anterior es equivalente al siguiente bucle while:
+
+```
+int i=1; /*sentencia de inicialización*/
+while(i<=1000) /*condición*/
+{ 
+    System.out.println(i);
+    i++; /*incremento*/
+}
+
+```
+Como se ha podido observar, es posible declarar la variable contadora dentro del propio bucle for. De hecho es la forma habitual de declarar un contador. De esta manera se crea una variable que muere en cuanto el bucle acaba.
+
+## EJERCICIOS
+
+[Hoja de ejercicios 4](Ejercicios/Hoja04_Estructuras_03.pdf)
