@@ -307,3 +307,7 @@ Se utiliza cuando al menos las sentencias del bucle se van a repetir una vez (en
 De hecho cualquier sentencia do..while se puede convertir en while. 
 
 Ejercicio para hacer: Intenta codificar el ejemplo anterior utilizando una estructura while
+
+## EJERCICIOS
+
+[Hoja de ejercicios 3](Ejercicios/Hoja03_Estructuras_03.pdf)
