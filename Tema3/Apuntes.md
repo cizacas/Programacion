@@ -367,6 +367,7 @@ Se trata de usar una estructura de bucle dentro de otra ya existente. Estas pued
 - While
 - Do
 - For
+
 Puedo anidar cualquier número de ellas unas dentro de otras, aunque lo más normal es no pasar de 3.
 
 Veamos este ejemplo. Calcular el factorial de n números introducidos por teclado. La introducción finaliza al introducir el 0.
