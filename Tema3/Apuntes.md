@@ -358,3 +358,75 @@ Como se ha podido observar, es posible declarar la variable contadora dentro del
 ## EJERCICIOS
 
 [Hoja de ejercicios 4](Ejercicios/Hoja04_Estructuras_03.pdf)
+
+## ANEXO DEL TEMA. BUCLES ANIDADOS
+
+### ¿EN QUE CONSISTEN?
+
+Se trata de usar una estructura de bucle dentro de otra ya existente. Estas pueden ser cualquieras de las estructuras repetitivas vistas hasta ahora.
+- While
+- Do
+- For
+Puedo anidar cualquier número de ellas unas dentro de otras, aunque lo más normal es no pasar de 3.
+
+Veamos este ejemplo. Calcular el factorial de n números introducidos por teclado. La introducción finaliza al introducir el 0.
+```
+ 	Scanner entrada = new Scanner(System.in);
+        int num, fact;
+        
+        //Intro datos
+        System.out.print("Introduce el número: ");
+        num=entrada.nextInt();
+        
+        //Calculo
+        while (num !=0) {            
+            fact=1;
+            for (int i = num; i > 0; i--) {                
+                fact*=i;
+            }
+            System.out.println("El factorial del número "+ num+" es: " +fact);
+            
+            //Vuelvo a pedir el número
+            System.out.print("Introduce el número: ");
+            num=entrada.nextInt();       
+        }
+        System.out.println("*************FIN************");
+```
+
+Veamos otro ejemplo. Dibujamos un cuadrado con * cuyo número de * por lado será pedido por teclado.
+
+```
+Scanner entrada = new Scanner(System.in);
+        int numAsteriscosLado;
+        System.out.print("Introduce el número de astericos por lado: ");
+        numAsteriscosLado=entrada.nextInt();
+ 
+        //Dibujamos la parte de arriba del cuadrado
+        for(int cont=0;numAsteriscosLado>cont;cont++){
+            System.out.print("*");
+        }
+        System.out.println("");
+ 
+        //Usamos un bucle anidado para dibujar los asteriscos del medio
+        //Calcula las filas intermedias poniendo un * al inicio y final de llas.
+        for(int cont=1;(numAsteriscosLado-2)>=cont;cont++){
+            System.out.print("*");
+            //Este bucle dibuja los espacio entre el primer y ultimo asterisco
+            //de cada una de las filas.
+            for (int i=0;(numAsteriscosLado-2)>i;i++){
+                System.out.print(" ");
+            }
+            System.out.print("*");
+            System.out.println("");
+        }
+ 
+        //Dibujamos la parte de abajo del cuadrado
+        for(int cont=0;numAsteriscosLado>cont;cont++){
+            System.out.print("*");
+        }
+        System.out.println("");
+```
+
+## EJERCICIOS
+
+[Hoja de ejercicios 5](Ejercicios/Hoja05_Estructuras_03.pdf)
