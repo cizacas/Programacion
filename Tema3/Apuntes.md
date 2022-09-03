@@ -13,7 +13,7 @@ Las expresiones lógicas se construyen por medio de variables booleanas o bien a
 
 Se trata de una sentencia que, tras evaluar una expresión lógica, ejecuta una serie de instrucciones en caso de que la expresión lógica sea verdadera. Si la expresión tiene un resultado falso, no se ejecutará ninguna expresión. Su sintaxis es:
 
-```
+```java
 if(expresión lógica)
 {
 	instrucciones
@@ -30,7 +30,7 @@ if(nota>=5)
 ```
 
 Las llaves se requieren sólo si va a haber varias instrucciones. En otro caso se puede crear el if sin llaves:
-```
+```java
 if(expresión lógica) sentencia;
 
 // Ejemplo:
@@ -43,7 +43,7 @@ if(nota<5)
 
 Es igual que la anterior, sólo que se añade un apartado else que contiene instrucciones que se ejecutarán si la expresión evaluada por el if es falsa. Sintaxis:
 
-```
+```java
 if(expresión lógica)
 {
 	instrucciones
@@ -59,7 +59,7 @@ else
 
 Como en el caso anterior, las llaves son necesarias sólo si se ejecuta más de una sentencia. Ejemplo de sentencia if-else:
 
-```
+```java
 if(nota>=5)
 {
 	System.out.println("Aprobado");
@@ -81,7 +81,7 @@ Las anidaciones se utilizan muchísimo al programar. Sólo hay que tener en cuen
 
 El código podría ser:
 
-```
+```java
 if (x==1) 
 {
          Instrucciones
@@ -107,7 +107,7 @@ else
 
 Una forma más legible de escribir ese mismo código sería con la instrucción if-else-if:
 
-```
+```java
 if (x==1) 
 {
       instrucciones
@@ -132,7 +132,7 @@ else if (x==3)
 
 Se la llama estructura condicional compleja porque permite evaluar varios valores a la vez. En realidad sirve como sustituta de algunas expresiones de tipo if-else-if. 
 Su sintaxis es la siguiente:
- ```
+ ```java
  switch (expresiónEntera) 
 {
 	case valor1:
@@ -154,7 +154,7 @@ La instrucción **break** se utiliza para salir del switch. De tal modo que si q
 
 El bloque default sirve para ejecutar instrucciones para los casos en los que la expresión no se ajuste a ningún case. Vemos un ejemplo:
 
-```
+```java
 switch (diasemana) 
 { 
      case 1:
@@ -182,7 +182,7 @@ switch (diasemana)
          texto=”?”; 
 } 
 ```
-```
+```java
 switch (diasemana) 
 {
     case 1:
@@ -206,7 +206,7 @@ La instrucción while permite crear bucles. Un bucle es un conjunto de sentencia
 
 La condición se mira antes de entrar dentro del while y cada vez que se termina de ejecutar las instrucciones del while. Sintaxis:
 
-```
+```java
 while (expresión lógica) 
 {
 sentencias que se ejecutan si la condición es true
@@ -220,7 +220,7 @@ El programa se ejecuta siguiendo estos pasos:
 
 Ejemplo (escribir números del 1 al 100):
 
-```
+```java
 int i=1;
 while (i<=100)
 {
@@ -242,7 +242,7 @@ En todos los bucles de contador necesitamos saber:
 
 Vemos un ejemplo:
 
-```
+```java
 i=10; //Valor inicial del contador, empieza valiendo 10 (por supuesto i debería estar declarada como entera, int) 
 while (i<=200)
 {  //condición del bucle, mientras i sea menor de 200, el bucle se repetirá, cuando i rebase este valor, el bucle termina
@@ -262,7 +262,7 @@ Esa expresión lógica a cumplir es lo que se conoce como centinela y normalment
 
 Ejemplo:
 
-```
+```java
 boolean salir=false; /* En este caso el centinela es una variable booleana que inicialmente vale falso */
 int n;
 while(salir==false) 	// Condición de repetición: que salir siga siendo falso. Ese es el centinela. 
@@ -287,14 +287,14 @@ La única diferencia respecto a la anterior está en que la expresión lógica s
 3. Si la expresión es verdadera volver al paso 1, sino continuar fuera del while
 
 Sintaxis:
-```
+```java
 do 
 {
           instrucciones
 } while (expresión lógica)
 ```
 Ejemplo (contar de uno a 1000):
-```
+```java
 int i=0;
 do 
 {
@@ -318,7 +318,7 @@ Es un bucle más complejo especialmente pensado para rellenar arrays (estructura
 
 Sintaxis:
 
-```
+```java
 for(inicialización;condición;incremento)
 {
     sentencias
@@ -334,7 +334,7 @@ Antes de entrar en el bucle, se ejecuta la instrucción de inicialización. Se e
 
 Ejemplo (contar números del 1 al 1000):
 
-```
+```java
 for(int i=1;i<=1000;i++)
 {
     System.out.println(i);
@@ -344,7 +344,7 @@ for(int i=1;i<=1000;i++)
 
 La ventaja que tiene es que el código se reduce. La desventaja es que el código es menos comprensible. El bucle anterior es equivalente al siguiente bucle while:
 
-```
+```java
 int i=1; /*sentencia de inicialización*/
 while(i<=1000) /*condición*/
 { 
@@ -371,7 +371,7 @@ Se trata de usar una estructura de bucle dentro de otra ya existente. Estas pued
 Puedo anidar cualquier número de ellas unas dentro de otras, aunque lo más normal es no pasar de 3.
 
 Veamos este ejemplo. Calcular el factorial de n números introducidos por teclado. La introducción finaliza al introducir el 0.
-```
+```java
  	Scanner entrada = new Scanner(System.in);
         int num, fact;
         
@@ -396,7 +396,7 @@ Veamos este ejemplo. Calcular el factorial de n números introducidos por teclad
 
 Veamos otro ejemplo. Dibujamos un cuadrado con * cuyo número de * por lado será pedido por teclado.
 
-```
+```java
 Scanner entrada = new Scanner(System.in);
         int numAsteriscosLado;
         System.out.print("Introduce el número de astericos por lado: ");
