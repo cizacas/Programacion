@@ -8,7 +8,7 @@ La clase String nos permitirá almacenar cadenas de caracteres.Realmente es una 
 
 Aunque como ya dije anteriormente es una Clase, podemos tratarla como un dato primitivo inicialmente. Una vez asignado un valor este es inmodificable. Cada vez que yo asigno un nuevo valor (nueva cadena), realmente provoca una nueva instanciación interna pero es transparente para nosotros.
 
-```
+```java
 public class usoString{
   public static void main(String[] args){
     String modulo="programación";
@@ -22,7 +22,7 @@ public class usoString{
 
 Las cadenas de caractéres o Strings en Java, se representan con comillas dobles. Si queremos que la propia " sea un carácter en si, y no el final de la cadena, hay que anteponer la secuencia de escape \.
 
-```
+```java
 System.out.println("*****ASIGNACION DE VALORES*****");
 String introduccion;
 introduccion="Trataremos inicialmente los 'String' para el manejo de cadenas. Son muy \"IMPORTANTES\"");
@@ -34,7 +34,7 @@ Cada uno de los caractéres que forman parte de la cadena, tiene asignado una po
 
 Con el metodo charAt(posición), podemos acceder al carácter que ocupa dicha posición.
 
-```
+```java
 public class usoString{
   public static void main(String[] args){
     String modulo="programación";
@@ -52,7 +52,7 @@ public class usoString{
 
 Otra función interesante en el manejo de cadenas es la que nos proporciona la longitud de la cadena. Incluye también los espacios en blanco ocupados dentro de la cadena. Para ello hacemos uso del método length().
 
-```
+```java
 public class usoString{
   public static void main(String[] args){
     String modulo="programación";
@@ -73,7 +73,7 @@ public class usoString{
 
 Es un método que permite extraer una subcadena dada, indicando la posición inicial y finjal de los caracteres a extraer. El método es substring(posIni, posFin);
 
-```
+```java
 System.out.println("*****Extraccion de una subcadena*****");
 System.out.println("Subcadena de la cadena ciclo entre las posiciones 3 y 6: "+ciclo.substring(3,6);
 ```
@@ -82,7 +82,7 @@ System.out.println("Subcadena de la cadena ciclo entre las posiciones 3 y 6: "+c
 
 Si queremos averiguar si dos cadenas son iguales, o lo podemos hacer con el operador == como con el resto de tipos simples. Para ello tenemos que utilizar el metodo equals, que devuielve true si ambas cadenas son iguales. 
 
-```
+```java
 System.out.println("*****COMPARACIÓN ENTRE CADENAS*****);
 String texto1="Buenos días";
 String texto2=new String("Buenos días");
@@ -92,7 +92,7 @@ System.out.println("¿Las cadenas son iguales?: " + texto1==texto2); // El resul
 
 Al preguntar si dos cadenas son iguales, distingue si está en mayúsculas o minúsculas. Si necesitamos preguntar sin distinguir mayúsculas de minúsculas, utilizamos equalsIgnoreCase().
 
-```
+```java
 System.out.println("*****COMPARACIÓN ENTRE CADENAS*****);
 String texto1="Buenos días";
 String texto2=new String("BUENOS DÍAS");
@@ -101,7 +101,7 @@ System.out.println("¿Las cadenas son iguales?: "+texto1.equalsIgnoreCase(texto2
 
 Otro modo de comparar cadenas, para saber si una es mayor que la otra, es con el método compareTo. Este método devuelve un entero >0, <0 o =0. Veamos un ejemplo:
 
-```
+```java
 System.out.println("*****COMPARACIÓN ENTRE CADENAS*****);
 String texto1="Buenos días";
 String texto2=new String("Buenos dias");
