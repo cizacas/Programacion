@@ -87,9 +87,11 @@ Tenemos que distinguir entre el JRE de Java y el JDK de Java. Para ello vamos a 
 
 Una vez que nos ha quedado clara la diferencia entre JRE y JDK, vamos a instalar el JDK, que ya incluye el JRE. La versión que tendríamos que instalar es el último JDK LTS, es decir, la versión que Oracle asegura que va a tener soporte durante más tiempo. Para ello tenemos que ir a la siguiente página, descargar el archivo elegido, e instalarlo en nuestro equipo.
 
+Muestra las últimas versiones
 [Enlace a la página de Oracle](https://www.oracle.com/java/technologies/downloads/)
 
-En nuestro caso vamos a instalar el JDK 17, que es la última version LTS, y es la que recomienda Oracle instalar.
+En nuestro caso vamos a instalar el JDK 18.
+[Enlace a la página de Oracle](https://www.oracle.com/java/technologies/downloads/](https://www.oracle.com/java/technologies/javase/jdk18-archive-downloads.html)
 
 #### Entorno de desarrollo
 
