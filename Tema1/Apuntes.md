@@ -372,9 +372,9 @@ Tenemos los siguientes tipos:
 
 **Realiza los siguientes ejercicios:**
 
-1. Pedir al usuario su edad y mostrar la que tendrá el próximo año.
+1. Definir una variable para guardar la edad y mostrar la que tendrá el próximo año.
 2. Escribir una aplicación que pide el año actual y el de nacimiento del usuario. Debe calcular su edad, suponiendo que en el año en curso el usuario ya ha cumplido años.
-3. El tipo short permite almacenar valores comprendidos entre -32768 y 32767. Escribir un programa que compruebe el rango de valores de un tipo se comporta de forma cíclica, es decri, el valor siguiente al máximo es el valor mínimo.
+3. El tipo short permite almacenar valores comprendidos entre -32768 y 32767. Escribir un programa que compruebe el rango de valores de un tipo se comporta de forma cíclica, es decir, el valor siguiente al máximo es el valor mínimo.
 4. Crear una aplicación que calcule la media aritmética de dos notas enteras. Hay que tener en cuenta que la media puede contener decimales.
 
 #### Incrementales o unarios
@@ -415,7 +415,7 @@ System.out.println(y); // imprime 6
 | Operador | Uso | Devuelve verdadero |
 | ------------- | ------------- | ------------- |
 | &&(and)  | condicion1&&condicion2  | condicion1 y condicion2 verdaderas  |
-| ||(or)  | condicion1||condicion2  | condicion1 o condicion2 verdaderas |
+| \|\|(or)  | condicion1\|\|condicion2  | condicion1 o condicion2 verdaderas |
 | !(not)  | !condicion  | condicion falsa |
 
 **Realiza el siguiente ejercicio:**
