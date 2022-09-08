@@ -73,11 +73,13 @@ public class usoString{
 
 Es un método que permite extraer una subcadena dada, indicando la posición inicial y final de los caracteres a extraer. El método es substring(posIni, posFin);
 
+PosIni indica la posición desde donde empiezas a extraer la cadena. PosFin indica el número de elementos que quieres recuperar desde la posición inicial.
+
 ```java
 System.out.println("*****Extraccion de una subcadena*****");
 System.out.println("Subcadena de la cadena ciclo entre las posiciones 3 y 6: "+ciclo.substring(3,6);
 ```
-
+La
 ### Igualdad de dos cadenas
 
 Si queremos averiguar si dos cadenas son iguales, o lo podemos hacer con el operador == como con el resto de tipos simples. Para ello tenemos que utilizar el metodo equals, que devuelve true si ambas cadenas son iguales. 
