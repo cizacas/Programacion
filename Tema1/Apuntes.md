@@ -91,7 +91,7 @@ Muestra las últimas versiones
 [Enlace a la página de Oracle](https://www.oracle.com/java/technologies/downloads/)
 
 En nuestro caso vamos a instalar el JDK 18.
-[Enlace a la página de Oracle](https://www.oracle.com/java/technologies/downloads/](https://www.oracle.com/java/technologies/javase/jdk18-archive-downloads.html)
+[Enlace a la página de Oracle](https://www.oracle.com/java/technologies/javase/jdk18-archive-downloads.html)
 
 #### Entorno de desarrollo
 
