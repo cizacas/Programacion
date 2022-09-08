@@ -71,7 +71,7 @@ public class usoString{
 
 ### Descomposición de una cadena
 
-Es un método que permite extraer una subcadena dada, indicando la posición inicial y finjal de los caracteres a extraer. El método es substring(posIni, posFin);
+Es un método que permite extraer una subcadena dada, indicando la posición inicial y final de los caracteres a extraer. El método es substring(posIni, posFin);
 
 ```java
 System.out.println("*****Extraccion de una subcadena*****");
@@ -80,7 +80,7 @@ System.out.println("Subcadena de la cadena ciclo entre las posiciones 3 y 6: "+c
 
 ### Igualdad de dos cadenas
 
-Si queremos averiguar si dos cadenas son iguales, o lo podemos hacer con el operador == como con el resto de tipos simples. Para ello tenemos que utilizar el metodo equals, que devuielve true si ambas cadenas son iguales. 
+Si queremos averiguar si dos cadenas son iguales, o lo podemos hacer con el operador == como con el resto de tipos simples. Para ello tenemos que utilizar el metodo equals, que devuelve true si ambas cadenas son iguales. 
 
 ```java
 System.out.println("*****COMPARACIÓN ENTRE CADENAS*****);
